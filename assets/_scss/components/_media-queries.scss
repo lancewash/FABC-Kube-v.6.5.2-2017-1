@@ -1,0 +1,129 @@
+
+/*
+================== Media Query Breakpoints =================
+*/
+
+/*******************************
+********* Breakpoints **********
+
+       xsmall-:   0
+        small-:   30rem  (480px)
+       medium-:   40rem  (640px)
+        large-:   64rem  (1024px)
+       xlarge-:   75rem  (1280px)
+      xxlarge-:   90rem  (1440px)
+     xxxlarge-:   105rem (1680px)
+
+    // xlarge: "(max-width: 1680px)"
+    // large:  "(max-width: 1280px)"
+    // medium: "(max-width: 980px)"
+    // small:  "(max-width: 736px)"
+    // xsmall: "(max-width: 480px)"
+
+********* Breakpoints *********
+*******************************/
+
+//$breakpoint-small: 30rem;
+//@media (min-width: $breakpoint-small) {
+//}
+//
+//$breakpoint-medium: 40rem;
+//@media (min-width: $breakpoint-medium) {
+//}
+//
+//$breakpoint-large: 64rem;
+//@media (min-width: $breakpoint-large) {
+//}
+//
+//$breakpoint-xlarge: 75rem;
+//@media (min-width: $breakpoint-xlarge) {
+//}
+//
+//$breakpoint-xxlarge: 90rem;
+//@media (min-width: $breakpoint-xxlarge) {
+//}
+//
+//$breakpoint-xxxlarge: 105rem;
+//@media (min-width: $breakpoint-xxxlarge) {
+//}
+
+
+//$breakpoint-small: "screen and (min-width: 30rem";
+//
+//@media #{$breakpoint-small} {
+//
+//}
+
+
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+
+  @if $point == xxxlarge{
+    @media (min-width: 105rem) { @content ; }
+  }
+  @else if $point == xxlarge {
+    @media (min-width: 90rem) { @content ; }
+  }
+  @else if $point == xlarge {
+    @media (min-width: 75rem) { @content ; }
+  }
+  @else if $point == large {
+    @media (min-width: 64rem)  { @content ; }
+  }
+  @else if $point == medium {
+    @media (max-width: 40rem) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 30rem)  { @content ; }
+  }
+}
+
+
+
+
+@media only screen and (max-height: 740px) {
+
+  .news-link {
+    top: 5px;
+    margin-bottom: 2rem;
+    padding-bottom: 0;
+  }
+}
+
+
+
+@media only screen and (max-height: 844px) {
+
+  .event-block {
+    max-height: 480px;
+    min-height: 400px;
+    top: 15px;
+    padding: 3rem 4rem 0 4rem;
+  }
+  .welcome h1 {
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (min-height: 845px) {
+
+  .event-block {
+    padding: 4rem 4rem 5rem 5rem;
+    top: 18px;
+    bottom: 5px;
+  }
+}
+
+@media only screen and (min-height: 924px) {
+
+  .event-block {
+    max-height: 500px;
+    min-height: 360px;
+    padding: 4rem 4rem 5rem 5rem;
+    top: 60px;
+    bottom: 30px;
+  }
+}

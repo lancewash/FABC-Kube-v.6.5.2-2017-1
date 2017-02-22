@@ -1,0 +1,17 @@
+
+.inverse {
+
+  p, b, strong, ul, li {
+    color: $body-text-color;
+    @mixin breakpoint($point) {
+      color: rgba(255, 255, 255, .75);
+
+    }
+  }
+  h1, h2, h3 {
+    color: $heading-text-color;
+    @mixin breakpoint($point) {
+      color: rgba(255, 255, 255, .85);
+    }
+  }
+}

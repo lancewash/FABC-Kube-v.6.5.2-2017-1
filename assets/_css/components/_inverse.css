@@ -1,0 +1,5 @@
+.inverse p, .inverse b, .inverse strong, .inverse ul, .inverse li {
+  color: rgba(255, 255, 255, 0.9); }
+
+.inverse h1, .inverse h2, .inverse h3 {
+  color: rgba(255, 255, 255, 0.8); }

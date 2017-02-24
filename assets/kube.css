@@ -1,3 +1,6 @@
+:root {
+  font-size: calc(1vw + 1vh + .5vmin); }
+
 html {
   background: white; }
 
@@ -376,6 +379,60 @@ body {
   animation-name: rotate; }
 
 /*
+================== Media Query Breakpoints =================
+*/
+/*******************************
+********* Breakpoints **********
+
+       xsmall-:   0
+        small-:   30rem  (480px)
+       medium-:   40rem  (640px)
+        large-:   64rem  (1024px)
+       xlarge-:   75rem  (1280px)
+      xxlarge-:   90rem  (1440px)
+     xxxlarge-:   105rem (1680px)
+
+    // xlarge: "(max-width: 1680px)"
+    // large:  "(max-width: 1280px)"
+    // medium: "(max-width: 980px)"
+    // small:  "(max-width: 736px)"
+    // xsmall: "(max-width: 480px)"
+
+********* Breakpoints *********
+*******************************/
+/*********************
+BREAKPOINTS
+*********************/
+@media only screen and (max-height: 740px) {
+  .news-link {
+    top: 5px;
+    margin-bottom: 2rem;
+    padding-bottom: 0; } }
+
+@media only screen and (max-height: 844px) {
+  .event-block {
+    max-height: 480px;
+    min-height: 400px;
+    top: 15px;
+    padding: 3rem 4rem 0 4rem; }
+  .welcome h1 {
+    padding-top: 2rem; } }
+
+@media only screen and (min-height: 845px) {
+  .event-block {
+    padding: 4rem 4rem 5rem 5rem;
+    top: 18px;
+    bottom: 5px; } }
+
+@media only screen and (min-height: 924px) {
+  .event-block {
+    max-height: 500px;
+    min-height: 360px;
+    padding: 4rem 4rem 5rem 5rem;
+    top: 60px;
+    bottom: 30px; } }
+
+/*
 =======================================================================
 ================================ Fonts ================================
 =======================================================================
@@ -456,15 +513,27 @@ body::-webkit-scrollbar-thumb {
   list-style: none; }
 
 section {
-  transition: all 1s ease-in-out; }
+  transition: all 1.5s ease-in-out; }
 
 .banner-wrap {
-  background: url("../img/fabc-banner-1.jpg");
+  background: url("../img/banner/fabc-banner-01-bw.jpg");
   background-size: cover;
-  height: calc( 80vh - 110px);
+  height: calc(80vh - 110px);
   margin-top: 110px;
   position: relative;
-  width: 80%; }
+  width: 80%;
+  transition: all 1.5s ease-in-out; }
+  .banner-wrap:after {
+    background: rgba(0, 48, 64, 0.8);
+    content: "";
+    bottom: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0; }
 
 .welcome {
   font-size: 4rem;
@@ -491,17 +560,17 @@ section {
 
 .event-block {
   background: #fff;
-  bottom: 2.5rem;
+  bottom: 20px;
   height: auto;
   max-height: 450px;
-  min-height: 360px;
+  min-height: 400px;
   min-width: 400px;
   padding: 4rem 4rem 5rem 5rem;
   position: absolute;
   right: -25%;
-  top: 2.75rem;
+  top: 50px;
   width: 40%;
-  z-index: 0; }
+  z-index: 10; }
   .event-block h2 {
     font-size: 2.5rem;
     margin-top: 0;
@@ -516,23 +585,54 @@ section {
       position: absolute;
       width: 3rem; }
   .event-block li {
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
     .event-block li a {
       display: inline-block;
       font-family: "playfair_displaybold";
       font-size: 1.5rem; }
     .event-block li span {
       display: block;
-      font-size: 14px; }
+      font-size: 17px; }
+
+.sermon-banner {
+  color: #fff !important;
+  font-size: 50% !important;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  padding: 3rem;
+  z-index: 10; }
 
 .news-link {
-  margin: 0 0 3rem;
+  margin: 0 0 5rem;
   padding: 0; }
+  .news-link span {
+    font-style: italic;
+    position: relative; }
+    .news-link span:after {
+      background: rgba(0, 0, 0, 0.2);
+      bottom: -10px;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 2.5rem; }
+
+.pastor p {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 28px; }
+
+.pastor img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .pastor-img {
   margin-bottom: 3rem; }
-  .pastor-img p {
-    text-align: center; }
+
+.sermon-player {
+  background: url("../img/fabc-banner-01-fade.jpg"); }
 
 a {
   color: #C44427;
@@ -557,27 +657,27 @@ h1.title {
 
 h1,
 .h1 {
-  font-size: 48px;
-  line-height: 52px; }
+  font-size: 52px;
+  line-height: 56px; }
 
 h2,
 .h2 {
-  font-size: 36px;
-  line-height: 40px; }
+  font-size: 42px;
+  line-height: 50px; }
 
 h3,
 .h3 {
-  font-size: 24px;
-  line-height: 32px; }
+  font-size: 30px;
+  line-height: 40px; }
 
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 24px; }
 
 h5,
 .h5 {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px; }
 
 h6,
@@ -671,9 +771,9 @@ dd {
   margin-left: 24px; }
 
 p, blockquote, hr, pre, ol, ul, dl, table, fieldset, figure, address, form {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   margin-bottom: 16px;
-  line-height: 30px; }
+  line-height: 38px; }
 
 hr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -769,7 +869,7 @@ article h2 {
   position: relative; }
   article h2:after {
     background: #C44427;
-    bottom: -3.35rem;
+    bottom: -3.55rem;
     content: "";
     height: 3px;
     left: 0;
@@ -799,7 +899,7 @@ article.article-wrap h2:after {
 15 -  93.75
 16 -  100
 ============================================================================
- */
+*/
 /*******************************
 ********* Breakpoints **********
 
@@ -823,7 +923,7 @@ article.article-wrap h2:after {
 .container {
   background: #fff;
   box-sizing: border-box;
-  max-width: 132rem;
+  max-width: 140rem;
   margin-left: auto;
   margin-right: auto; }
 
@@ -836,6 +936,9 @@ article.article-wrap h2:after {
   flex-wrap: wrap;
   position: relative;
   z-index: 1; }
+  .row.space {
+    padding-top: 5rem;
+    padding-bottom: 5rem; }
 
 .row.centered {
   -ms-flex-pack: center;
@@ -889,12 +992,12 @@ article.article-wrap h2:after {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-flex-basis: 0;
-  -ms-flex-basis: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-basis: auto;
   -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  max-width: 100%;
-  padding: 4rem 5rem; }
+  flex-basis: auto;
+  width: 100%;
+  padding: 2rem; }
   .column.no-pad {
     padding: 0; }
 
@@ -932,110 +1035,26 @@ article.article-wrap h2:after {
 .pull-right {
   margin-left: auto; }
 
-.one {
-  -webkit-flex-basis: 6.25%;
-  -ms-flex-preferred-size: 6.25%;
-  flex-basis: 6.25%;
-  max-width: 6.25%;
-  width: 6.25%; }
-
-.two {
-  -webkit-flex-basis: 12.5%;
-  -ms-flex-preferred-size: 12.5%;
-  flex-basis: 12.5%;
-  max-width: 12.5%;
-  width: 12.5%; }
-
-.three {
-  -webkit-flex-basis: 18.75%;
-  -ms-flex-preferred-size: 18.75%;
-  flex-basis: 18.75%;
-  max-width: 18.75%;
-  width: 18.75%; }
-
-.four {
-  -webkit-flex-basis: 25%;
-  -ms-flex-preferred-size: 25%;
-  flex-basis: 25%;
-  max-width: 25%;
-  width: 25%; }
-
-.five {
-  -webkit-flex-basis: 31.25%;
-  -ms-flex-preferred-size: 31.25%;
-  flex-basis: 31.25%;
-  max-width: 31.25%;
-  width: 31.25%; }
-
-.six {
-  -webkit-flex-basis: 37.5%;
-  -ms-flex-preferred-size: 37.5%;
-  flex-basis: 37.5%;
-  max-width: 37.5%;
-  width: 37.5%; }
-
-.seven {
-  -webkit-flex-basis: 43.75%;
-  -ms-flex-preferred-size: 43.75%;
-  flex-basis: 43.75%;
-  max-width: 43.75%;
-  width: 43.75%; }
-
-.eight {
-  -webkit-flex-basis: 50%;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
-  max-width: 50%;
-  width: 50%; }
-
-.nine {
-  -webkit-flex-basis: 56.25%;
-  -ms-flex-preferred-size: 56.25%;
-  flex-basis: 56.25%;
-  max-width: 56.25%;
-  width: 56.25%; }
-
-.ten {
-  -webkit-flex-basis: 62.5%;
-  -ms-flex-preferred-size: 62.5%;
-  flex-basis: 62.5%;
-  max-width: 62.5%;
-  width: 62.5%; }
-
-.eleven {
-  -webkit-flex-basis: 68.75%;
-  -ms-flex-preferred-size: 68.75%;
-  flex-basis: 68.75%;
-  max-width: 68.75%;
-  width: 68.75%; }
-
-.twelve {
-  -webkit-flex-basis: 75%;
-  -ms-flex-preferred-size: 75%;
-  flex-basis: 75%;
-  max-width: 75%;
-  width: 75%; }
-
-.thirteen {
-  -webkit-flex-basis: 81.25%;
-  -ms-flex-preferred-size: 81.25%;
-  flex-basis: 81.25%;
-  max-width: 81.25%;
-  width: 81.25%; }
-
-.fourteen {
-  -webkit-flex-basis: 87.5%;
-  -ms-flex-preferred-size: 87.5%;
-  flex-basis: 87.5%;
-  max-width: 87.5%;
-  width: 87.5%; }
-
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.eleven,
+.twelve,
+.thirteen,
+.fourteen,
 .fifteen {
-  -webkit-flex-basis: 93.75%;
-  -ms-flex-preferred-size: 93.75%;
-  flex-basis: 93.75%;
-  max-width: 93.75%;
-  width: 93.75%; }
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+  width: 100%; }
 
 .sixteen {
   -webkit-flex-basis: 100%;
@@ -1044,68 +1063,187 @@ article.article-wrap h2:after {
   max-width: 100%;
   width: 100%; }
 
-.offset-one {
-  margin-left: 6.25%; }
-
-.offset-two {
-  margin-left: 12.5%; }
-
-.offset-three {
-  margin-left: 18.75%; }
-
-.offset-four {
-  margin-left: 25%; }
-
-.offset-five {
-  margin-left: 31.25%; }
-
-.offset-six {
-  margin-left: 37.5%; }
-
-.offset-seven {
-  margin-left: 43.75%; }
-
-.offset-eight {
-  margin-left: 50%; }
-
-.offset-nine {
-  margin-left: 56.25%; }
-
-.offset-ten {
-  margin-left: 62.5%; }
-
-.offset-eleven {
-  margin-left: 68.75%; }
-
-.offset-twelve {
-  margin-left: 75%; }
-
-.offset-thirteen {
-  margin-left: 81.25%; }
-
-.offset-fourteen {
-  margin-left: 87.5%; }
-
+.offset-one,
+.offset-two,
+.offset-three,
+.offset-four,
+.offset-five,
+.offset-six,
+.offset-seven,
+.offset-eight,
+.offset-nine,
+.offset-ten,
+.offset-eleven,
+.offset-twelve,
+.offset-thirteen,
+.offset-fourteen,
 .offset-fifteen {
-  margin-left: 93.75%; }
+  margin-left: 0; }
 
-.row-layout {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center; }
-
-.column-fluid {
-  -ms-flex-grow: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  width: 100%; }
+@media (min-width: 75rem) {
+  .one {
+    -webkit-flex-basis: 6.25%;
+    -ms-flex-preferred-size: 6.25%;
+    flex-basis: 6.25%;
+    max-width: 6.25%;
+    width: 6.25%; }
+  .two {
+    -webkit-flex-basis: 12.5%;
+    -ms-flex-preferred-size: 12.5%;
+    flex-basis: 12.5%;
+    max-width: 12.5%;
+    width: 12.5%; }
+  .three {
+    -webkit-flex-basis: 18.75%;
+    -ms-flex-preferred-size: 18.75%;
+    flex-basis: 18.75%;
+    max-width: 18.75%;
+    width: 18.75%; }
+  .four {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    width: 25%; }
+  .five {
+    -webkit-flex-basis: 31.25%;
+    -ms-flex-preferred-size: 31.25%;
+    flex-basis: 31.25%;
+    max-width: 31.25%;
+    width: 31.25%; }
+  .six {
+    -webkit-flex-basis: 37.5%;
+    -ms-flex-preferred-size: 37.5%;
+    flex-basis: 37.5%;
+    max-width: 37.5%;
+    width: 37.5%; }
+  .seven {
+    -webkit-flex-basis: 43.75%;
+    -ms-flex-preferred-size: 43.75%;
+    flex-basis: 43.75%;
+    max-width: 43.75%;
+    width: 43.75%; }
+  .eight {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    width: 50%; }
+  .nine {
+    -webkit-flex-basis: 56.25%;
+    -ms-flex-preferred-size: 56.25%;
+    flex-basis: 56.25%;
+    max-width: 56.25%;
+    width: 56.25%; }
+  .ten {
+    -webkit-flex-basis: 62.5%;
+    -ms-flex-preferred-size: 62.5%;
+    flex-basis: 62.5%;
+    max-width: 62.5%;
+    width: 62.5%; }
+  .eleven {
+    -webkit-flex-basis: 68.75%;
+    -ms-flex-preferred-size: 68.75%;
+    flex-basis: 68.75%;
+    max-width: 68.75%;
+    width: 68.75%; }
+  .twelve {
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+    width: 75%; }
+  .thirteen {
+    -webkit-flex-basis: 81.25%;
+    -ms-flex-preferred-size: 81.25%;
+    flex-basis: 81.25%;
+    max-width: 81.25%;
+    width: 81.25%; }
+  .fourteen {
+    -webkit-flex-basis: 87.5%;
+    -ms-flex-preferred-size: 87.5%;
+    flex-basis: 87.5%;
+    max-width: 87.5%;
+    width: 87.5%; }
+  .fifteen {
+    -webkit-flex-basis: 93.75%;
+    -ms-flex-preferred-size: 93.75%;
+    flex-basis: 93.75%;
+    max-width: 93.75%;
+    width: 93.75%; }
+  .sixteen {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    width: 100%; }
+  .offset-one {
+    margin-left: 6.25%; }
+  .offset-two {
+    margin-left: 12.5%; }
+  .offset-three {
+    margin-left: 18.75%; }
+  .offset-four {
+    margin-left: 25%; }
+  .offset-five {
+    margin-left: 31.25%; }
+  .offset-six {
+    margin-left: 37.5%; }
+  .offset-seven {
+    margin-left: 43.75%; }
+  .offset-eight {
+    margin-left: 50%; }
+  .offset-nine {
+    margin-left: 56.25%; }
+  .offset-ten {
+    margin-left: 62.5%; }
+  .offset-eleven {
+    margin-left: 68.75%; }
+  .offset-twelve {
+    margin-left: 75%; }
+  .offset-thirteen {
+    margin-left: 81.25%; }
+  .offset-fourteen {
+    margin-left: 87.5%; }
+  .offset-fifteen {
+    margin-left: 93.75%; }
+  .offset-sixteen {
+    margin-left: 100%; }
+  .row-layout {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center; }
+  .column {
+    -ms-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 0;
+    -ms-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    width: 100%;
+    padding: 4rem 6rem; }
+  .column.first {
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1; }
+  .column.last {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1; }
+  .column-fluid {
+    -ms-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 100%; } }
 
 @media (max-width: 768px) {
   .row-layout {
@@ -1453,6 +1591,11 @@ button,
   text-align: left;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
+  button.inverse,
+  .button.inverse {
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25); }
 
 input.button {
   height: auto; }
@@ -2469,7 +2612,7 @@ button:hover .menu-icon {
 
 .cd-auto-hide-header {
   position: fixed;
-  z-index: 2;
+  z-index: 20;
   top: 0;
   left: 0;
   width: 100%;
@@ -2507,14 +2650,14 @@ button:hover .menu-icon {
     top: 40px; }
 
 .cd-auto-hide-header .logo-small .fabc-logo {
-  background: url("../img/fabc-logo-small.png") no-repeat;
+  background: url("../img/fabc-logo-small.png") no-repeat 0 0;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   height: 80px;
   left: 0;
-  margin: -15px 0 0 1px;
-  width: 260px;
-  top: 14px; }
+  margin: 0;
+  top: 0;
+  width: 260px; }
 
 .cd-auto-hide-header.is-hidden .fabc-logo {
   background: url("../img/fabc-logo-small.png") no-repeat;
@@ -2535,10 +2678,10 @@ button:hover .menu-icon {
 
 @media only screen and (min-width: 1200px) {
   .cd-auto-hide-header {
-    height: 40px;
+    height: 44px;
     left: auto;
     right: auto;
-    max-width: 132rem; } }
+    max-width: 140rem; } }
 
 .cd-auto-hide-header .logo,
 .cd-auto-hide-header .nav-trigger {
@@ -2692,7 +2835,6 @@ button:hover .menu-icon {
     margin-right: 0; }
   .cd-primary-nav > ul a {
     /* reset mobile style */
-    background: #ccc;
     height: auto;
     line-height: normal;
     padding: 10px 20px;
@@ -2780,7 +2922,7 @@ button:hover .menu-icon {
   display: block;
   color: #ffffff;
   line-height: 50px;
-  padding: 0 2rem; }
+  padding: 11px 40px; }
 
 .cd-secondary-nav .fabc-logo a {
   color: transparent;
@@ -2809,7 +2951,11 @@ button:hover .menu-icon {
     -ms-flex-negative: 1;
     flex-shrink: 1; }
   .cd-secondary-nav a {
-    line-height: 78px; }
+    line-height: 55px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800; }
   .cd-secondary-nav a.active {
     box-shadow: inset 0 -3px #8F3985; } }
 
@@ -2904,15 +3050,27 @@ Intro Section
     margin-top: 80px; } }
 
 section {
-  transition: all 1s ease-in-out; }
+  transition: all 1.5s ease-in-out; }
 
 .banner-wrap {
-  background: url("../img/fabc-banner-1.jpg");
+  background: url("../img/banner/fabc-banner-01-bw.jpg");
   background-size: cover;
-  height: calc( 80vh - 110px);
+  height: calc(80vh - 110px);
   margin-top: 110px;
   position: relative;
-  width: 80%; }
+  width: 80%;
+  transition: all 1.5s ease-in-out; }
+  .banner-wrap:after {
+    background: rgba(0, 48, 64, 0.8);
+    content: "";
+    bottom: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0; }
 
 .welcome {
   font-size: 4rem;
@@ -2939,17 +3097,17 @@ section {
 
 .event-block {
   background: #fff;
-  bottom: 2.5rem;
+  bottom: 20px;
   height: auto;
   max-height: 450px;
-  min-height: 360px;
+  min-height: 400px;
   min-width: 400px;
   padding: 4rem 4rem 5rem 5rem;
   position: absolute;
   right: -25%;
-  top: 2.75rem;
+  top: 50px;
   width: 40%;
-  z-index: 0; }
+  z-index: 10; }
   .event-block h2 {
     font-size: 2.5rem;
     margin-top: 0;
@@ -2964,26 +3122,57 @@ section {
       position: absolute;
       width: 3rem; }
   .event-block li {
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
     .event-block li a {
       display: inline-block;
       font-family: "playfair_displaybold";
       font-size: 1.5rem; }
     .event-block li span {
       display: block;
-      font-size: 14px; }
+      font-size: 17px; }
+
+.sermon-banner {
+  color: #fff !important;
+  font-size: 50% !important;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  padding: 3rem;
+  z-index: 10; }
 
 .news-link {
-  margin: 0 0 3rem;
+  margin: 0 0 5rem;
   padding: 0; }
+  .news-link span {
+    font-style: italic;
+    position: relative; }
+    .news-link span:after {
+      background: rgba(0, 0, 0, 0.2);
+      bottom: -10px;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 2.5rem; }
+
+.pastor p {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 28px; }
+
+.pastor img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .pastor-img {
   margin-bottom: 3rem; }
-  .pastor-img p {
-    text-align: center; }
+
+.sermon-player {
+  background: url("../img/fabc-banner-01-fade.jpg"); }
 
 .intro {
-  background: #fff;
+  background: transparent;
   opacity: 0;
   transition: 1s, background-color 2s linear; }
 
@@ -2999,12 +3188,15 @@ section {
   width: 100% !important; }
 
 .scroll .intro {
-  background: white;
+  background: #081F27;
   opacity: 1;
-  padding: 3rem 0 8rem; }
+  padding: 0 0 4rem; }
+  @media (min-width: 64rem) {
+    .scroll .intro {
+      background: #fff; } }
 
 .scroll .event-block {
-  right: -48%; }
+  right: -50%; }
 
 .scroll .pastor {
   opacity: 1; }
@@ -3034,11 +3226,11 @@ section {
   top: 0;
   bottom: 0;
   height: 100vh;
-  width: 30px;
+  width: 50px;
   z-index: 2000;
   transition: all .5s ease-in-out; }
 
-.nav-wrap-primary:hover .nav-sidebar {
+.cd-primary-nav:hover .nav-sidebar {
   right: -10px; }
 
 .body-overlay:hover .nav-sidebar:not(".nav-wrap-primary") {
@@ -3047,7 +3239,7 @@ section {
 .body-overlay {
   position: fixed;
   z-index: -100;
-  top: 40px;
+  top: 42px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -3066,7 +3258,7 @@ section {
 .cd-primary-nav:hover .body-overlay {
   position: fixed;
   z-index: 100;
-  top: 40px;
+  top: 42px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -3177,3 +3369,38 @@ button {
 .parallax-window {
   min-height: 400px;
   background: transparent; }
+
+#player_iframe {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); }
+
+.sermon-player h2 {
+  color: rgba(255, 255, 255, 0.9);
+  position: relative; }
+  .sermon-player h2:after {
+    background: rgba(255, 255, 255, 0.5) !important;
+    bottom: -3.45rem;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 3rem; }
+
+.sermon-player p {
+  color: rgba(255, 255, 255, 0.8); }
+
+.sermon-player .six {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  left: -775px;
+  transition: all 1s ease-in-out; }
+
+.sermon-player .six.scroll {
+  left: 0; }
+
+.inverse p, .inverse b, .inverse strong, .inverse ul, .inverse li {
+  color: #555; }
+
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #004462; }

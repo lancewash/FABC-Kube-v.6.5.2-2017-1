@@ -516,24 +516,13 @@ section {
   transition: all 1.5s ease-in-out; }
 
 .banner-wrap {
-  background: url("../img/banner/fabc-banner-01-bw.jpg");
+  background: url("../img/banner/fabc-banner-overlay-01.jpg");
   background-size: cover;
   height: calc(80vh - 110px);
   margin-top: 110px;
   position: relative;
   width: 80%;
   transition: all 1.5s ease-in-out; }
-  .banner-wrap:after {
-    background: rgba(0, 48, 64, 0.8);
-    content: "";
-    bottom: 0;
-    top: 0;
-    left: 0;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 0; }
 
 .welcome {
   font-size: 4rem;
@@ -3053,24 +3042,13 @@ section {
   transition: all 1.5s ease-in-out; }
 
 .banner-wrap {
-  background: url("../img/banner/fabc-banner-01-bw.jpg");
+  background: url("../img/banner/fabc-banner-overlay-01.jpg");
   background-size: cover;
   height: calc(80vh - 110px);
   margin-top: 110px;
   position: relative;
   width: 80%;
   transition: all 1.5s ease-in-out; }
-  .banner-wrap:after {
-    background: rgba(0, 48, 64, 0.8);
-    content: "";
-    bottom: 0;
-    top: 0;
-    left: 0;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 0; }
 
 .welcome {
   font-size: 4rem;
@@ -3222,11 +3200,11 @@ section {
 .nav-sidebar {
   position: absolute;
   background-color: white;
-  right: -50px;
+  right: -150px;
   top: 0;
   bottom: 0;
   height: 100vh;
-  width: 50px;
+  width: 150px;
   z-index: 2000;
   transition: all .5s ease-in-out; }
 

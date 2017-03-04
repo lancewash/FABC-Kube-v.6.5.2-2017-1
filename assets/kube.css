@@ -3252,11 +3252,11 @@ section {
 .nav-sidebar {
   position: absolute;
   background-color: white;
-  right: -50px;
+  right: -150px;
   top: 0;
   bottom: 0;
   height: 100vh;
-  width: 50px;
+  width: 150px;
   z-index: 2000;
   transition: all .5s ease-in-out; }
 

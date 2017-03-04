@@ -6,26 +6,27 @@ section {
 .banner-wrap {
   //background: url("../img/fabc-banner-02-overlay.jpg");
   //background: url("../img/fabc-banner-02-overlay-hover.jpg");
-  background: url("../img/banner/fabc-banner-01-bw.jpg");
+  background: url("../img/banner/fabc-banner-overlay-01.jpg");
   background-size: cover;
+  display: flex;
   height: calc(80vh - 110px);
   margin-top: 110px;
   position: relative;
-  width: 80%;
+  width: 100%;
   transition: all 1.5s ease-in-out;
 
-  &:after {
-    background: rgba(0,48,64,.8);
-    content: "";
-    bottom: 0;
-    top: 0;
-    left: 0;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-  }
+  //&:after {
+  //  background: rgba(0,48,64,.8);
+  //  content: "";
+  //  bottom: 0;
+  //  top: 0;
+  //  left: 0;
+  //  height: 100%;
+  //  right: 0;
+  //  position: absolute;
+  //  width: 100%;
+  //  z-index: 0;
+  //}
 
   //&:hover {
   //  background: url("../img/fabc-banner-02-overlay-hover.jpg");
@@ -75,22 +76,35 @@ section {
 
 .intro {
   padding-top: 3.5rem;
+
+  .column em {
+    //color:  rgba(0,0,0,1);
+    font-family: $font-family-emphasis;
+    font-size: $h3-font-size;
+    //font-weight: 600;
+  }
 }
 
 .event-block {
   background: #fff;
-  bottom: 20px;
-  height: auto;
-  max-height: 450px;
-  min-height: 400px;
-  min-width: 400px;
+  //bottom: 0;
+  //height: calc(100vh - 120px - 20vh);
+  //max-height: 450px;
+  //min-height: 400px;
+  //min-width: 400px;
   padding: 4rem 4rem 5rem 5rem;
-  position: absolute;
+  //position: absolute;
   //right: 2rem;
-  right: -25%;
-  top: 50px;
+  //right: -15%;
+  //top: 0;
+  transform: translate(70%, 0);
+  transition: all 1s ease-in-out;
   width: 40%;
   z-index: 10;
+
+  .scroll & {
+    transform: translate(calc(100vw - 56%), 0);
+  }
 
   h2 {
     font-size: 2.5rem;
@@ -115,12 +129,12 @@ section {
     a {
       display: inline-block;
       font-family: $heading-font-family;
-      font-size: 1.5rem;
+      //font-size: 1.5rem;
     }
 
     span {
       display: block;
-      font-size: $font-size-small + 3px;
+      font-size: $font-size-small;
     }
   }
 }
@@ -128,12 +142,22 @@ section {
 
 .sermon-banner {
   color: #fff !important;
-  font-size: 50% !important;
-  position: absolute;
-  bottom: 30px;
-  left: 0;
+  align-self: flex-end;
+  //position: absolute;
+  //bottom: 30px;
+  //left: 0;
   padding: 3rem;
   z-index: 10;
+
+  h2 {
+    font-size: $h2-font-size;
+    margin-bottom: $heading-margin-bottom;
+  }
+
+  p {
+    font-size: $font-size-regular + 4px;
+    line-height: $base-line + 6px ;
+  }
 }
 .news-link {
   margin: 0 0 5rem;

@@ -101,10 +101,10 @@ button:hover,
 	@include button(#fff, $color-primary);
 }
 
-// Inverted
-.button.inverted {
-	@include button(#000, #fff);
-}
+//// Inverted
+//.button.inverted {
+//	@include button(#000, #fff);
+//}
 
 // Grouped
 .buttons.group {

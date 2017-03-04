@@ -411,9 +411,7 @@ BREAKPOINTS
 
 @media only screen and (max-height: 844px) {
   .event-block {
-    max-height: 480px;
-    min-height: 400px;
-    top: 15px;
+    top: 0;
     padding: 3rem 4rem 0 4rem; }
   .welcome h1 {
     padding-top: 2rem; } }
@@ -421,16 +419,14 @@ BREAKPOINTS
 @media only screen and (min-height: 845px) {
   .event-block {
     padding: 4rem 4rem 5rem 5rem;
-    top: 18px;
-    bottom: 5px; } }
+    top: 0;
+    bottom: 0; } }
 
 @media only screen and (min-height: 924px) {
   .event-block {
-    max-height: 500px;
-    min-height: 360px;
     padding: 4rem 4rem 5rem 5rem;
-    top: 60px;
-    bottom: 30px; } }
+    top: 0;
+    bottom: 0; } }
 
 /*
 =======================================================================
@@ -492,6 +488,66 @@ BREAKPOINTS
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'majesti_bannerbold';
+  src: url("fonts/majesti-banner-bold-webfont.woff2") format("woff2"), url("fonts/majesti-banner-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerbold_italic';
+  src: url("fonts/majesti-banner-bolditalic-webfont.woff2") format("woff2"), url("fonts/majesti-banner-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerbook';
+  src: url("fonts/majesti-banner-book-webfont.woff2") format("woff2"), url("fonts/majesti-banner-book-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerbook_italic';
+  src: url("fonts/majesti-banner-bookitalic-webfont.woff2") format("woff2"), url("fonts/majesti-banner-bookitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerheavy';
+  src: url("fonts/majesti-banner-heavy-webfont.woff2") format("woff2"), url("fonts/majesti-banner-heavy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerheavy_italic';
+  src: url("fonts/majesti-banner-heavyitalic-webfont.woff2") format("woff2"), url("fonts/majesti-banner-heavyitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerlight';
+  src: url("fonts/majesti-banner-light-webfont.woff2") format("woff2"), url("fonts/majesti-banner-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerlight_italic';
+  src: url("fonts/majesti-banner-lightitalic-webfont.woff2") format("woff2"), url("fonts/majesti-banner-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannermedium';
+  src: url("fonts/majesti-banner-medium-webfont.woff2") format("woff2"), url("fonts/majesti-banner-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannermedium_italic';
+  src: url("fonts/majesti-banner-mediumitalic-webfont.woff2") format("woff2"), url("fonts/majesti-banner-mediumitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 body::-webkit-scrollbar {
   width: 1em; }
 
@@ -516,24 +572,13 @@ section {
   transition: all 1.5s ease-in-out; }
 
 .banner-wrap {
-  background: url("../img/banner/fabc-banner-01-bw.jpg");
+  background: url("../img/banner/fabc-banner-overlay-01.jpg");
   background-size: cover;
   height: calc(80vh - 110px);
   margin-top: 110px;
   position: relative;
-  width: 80%;
+  width: 100%;
   transition: all 1.5s ease-in-out; }
-  .banner-wrap:after {
-    background: rgba(0, 48, 64, 0.8);
-    content: "";
-    bottom: 0;
-    top: 0;
-    left: 0;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 0; }
 
 .welcome {
   font-size: 4rem;
@@ -560,15 +605,13 @@ section {
 
 .event-block {
   background: #fff;
-  bottom: 20px;
-  height: auto;
-  max-height: 450px;
-  min-height: 400px;
+  bottom: 0;
+  height: calc(100vh - 120px - 20vh);
   min-width: 400px;
   padding: 4rem 4rem 5rem 5rem;
   position: absolute;
-  right: -25%;
-  top: 50px;
+  right: -15%;
+  top: 0;
   width: 40%;
   z-index: 10; }
   .event-block h2 {
@@ -588,7 +631,7 @@ section {
     margin-bottom: 2rem; }
     .event-block li a {
       display: inline-block;
-      font-family: "playfair_displaybold";
+      font-family: "majesti_bannermedium", "playfair_displaybold";
       font-size: 1.5rem; }
     .event-block li span {
       display: block;
@@ -644,7 +687,7 @@ a:hover {
   color: #99351f; }
 
 h1.title, h1, h2, h3, h4, h5, h6 {
-  font-family: "playfair_displaybold";
+  font-family: "majesti_bannermedium", "playfair_displaybold";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   color: #004462;
@@ -3053,24 +3096,13 @@ section {
   transition: all 1.5s ease-in-out; }
 
 .banner-wrap {
-  background: url("../img/banner/fabc-banner-01-bw.jpg");
+  background: url("../img/banner/fabc-banner-overlay-01.jpg");
   background-size: cover;
   height: calc(80vh - 110px);
   margin-top: 110px;
   position: relative;
-  width: 80%;
+  width: 100%;
   transition: all 1.5s ease-in-out; }
-  .banner-wrap:after {
-    background: rgba(0, 48, 64, 0.8);
-    content: "";
-    bottom: 0;
-    top: 0;
-    left: 0;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 0; }
 
 .welcome {
   font-size: 4rem;
@@ -3097,15 +3129,13 @@ section {
 
 .event-block {
   background: #fff;
-  bottom: 20px;
-  height: auto;
-  max-height: 450px;
-  min-height: 400px;
+  bottom: 0;
+  height: calc(100vh - 120px - 20vh);
   min-width: 400px;
   padding: 4rem 4rem 5rem 5rem;
   position: absolute;
-  right: -25%;
-  top: 50px;
+  right: -15%;
+  top: 0;
   width: 40%;
   z-index: 10; }
   .event-block h2 {
@@ -3125,7 +3155,7 @@ section {
     margin-bottom: 2rem; }
     .event-block li a {
       display: inline-block;
-      font-family: "playfair_displaybold";
+      font-family: "majesti_bannermedium", "playfair_displaybold";
       font-size: 1.5rem; }
     .event-block li span {
       display: block;

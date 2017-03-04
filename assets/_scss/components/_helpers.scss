@@ -4,3 +4,11 @@
 .no-bullet {
   list-style: none;
 }
+
+.inverted {
+  color: #fff;
+
+  h1, h2, h3, h4, h5, ul, li, p, strong, em, a {
+    color: #fff;
+  }
+}

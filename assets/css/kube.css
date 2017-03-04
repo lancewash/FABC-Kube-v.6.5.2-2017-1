@@ -8,6 +8,20 @@ body {
   color: #555;
   margin: 0; }
 
+article h2 {
+  position: relative; }
+  article h2:after {
+    background: #C44427;
+    bottom: -3.55rem;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 3rem; }
+
+article.article-wrap h2:after {
+  background: none; }
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -400,35 +414,6 @@ body {
 /*********************
 BREAKPOINTS
 *********************/
-@media only screen and (max-height: 740px) {
-  .news-link {
-    top: 5px;
-    margin-bottom: 2rem;
-    padding-bottom: 0; } }
-
-@media only screen and (max-height: 844px) {
-  .event-block {
-    max-height: 480px;
-    min-height: 400px;
-    top: 15px;
-    padding: 3rem 4rem 0 4rem; }
-  .welcome h1 {
-    padding-top: 2rem; } }
-
-@media only screen and (min-height: 845px) {
-  .event-block {
-    padding: 4rem 4rem 5rem 5rem;
-    top: 18px;
-    bottom: 5px; } }
-
-@media only screen and (min-height: 924px) {
-  .event-block {
-    max-height: 500px;
-    min-height: 360px;
-    padding: 4rem 4rem 5rem 5rem;
-    top: 60px;
-    bottom: 30px; } }
-
 /*
 =======================================================================
 ================================ Fonts ================================
@@ -489,6 +474,66 @@ BREAKPOINTS
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'majesti_bannerbold';
+  src: url("fonts/majesti-banner-bold-webfont.woff2") format("woff2"), url("fonts/majesti-banner-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerbold_italic';
+  src: url("fonts/majesti-banner-bolditalic-webfont.woff2") format("woff2"), url("fonts/majesti-banner-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerbook';
+  src: url("fonts/majesti-banner-book-webfont.woff2") format("woff2"), url("fonts/majesti-banner-book-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerbook_italic';
+  src: url("fonts/majesti-banner-bookitalic-webfont.woff2") format("woff2"), url("fonts/majesti-banner-bookitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerheavy';
+  src: url("fonts/majesti-banner-heavy-webfont.woff2") format("woff2"), url("fonts/majesti-banner-heavy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerheavy_italic';
+  src: url("fonts/majesti-banner-heavyitalic-webfont.woff2") format("woff2"), url("fonts/majesti-banner-heavyitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerlight';
+  src: url("fonts/majesti-banner-light-webfont.woff2") format("woff2"), url("fonts/majesti-banner-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannerlight_italic';
+  src: url("fonts/majesti-banner-lightitalic-webfont.woff2") format("woff2"), url("fonts/majesti-banner-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannermedium';
+  src: url("fonts/majesti-banner-medium-webfont.woff2") format("woff2"), url("fonts/majesti-banner-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'majesti_bannermedium_italic';
+  src: url("fonts/majesti-banner-mediumitalic-webfont.woff2") format("woff2"), url("fonts/majesti-banner-mediumitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 body::-webkit-scrollbar {
   width: 1em; }
 
@@ -502,35 +547,28 @@ body::-webkit-scrollbar-thumb {
   body::-webkit-scrollbar-thumb:hover {
     background: #99351f; }
 
-.event-block {
-  height: auto;
-  max-height: 400px; }
-
 .no-bullet {
   list-style: none; }
+
+.inverted {
+  color: #fff; }
+  .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted ul, .inverted li, .inverted p, .inverted strong, .inverted em, .inverted a {
+    color: #fff; }
 
 section {
   transition: all 1.5s ease-in-out; }
 
 .banner-wrap {
-  background: url("../img/banner/fabc-banner-01-bw.jpg");
+  background: url("../img/banner/fabc-banner-overlay-01.jpg");
   background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: calc(80vh - 110px);
   margin-top: 110px;
   position: relative;
-  width: 80%;
+  width: 100%;
   transition: all 1.5s ease-in-out; }
-  .banner-wrap:after {
-    background: rgba(0, 48, 64, 0.8);
-    content: "";
-    bottom: 0;
-    top: 0;
-    left: 0;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 1; }
 
 .welcome {
   font-size: 4rem;
@@ -554,20 +592,23 @@ section {
 
 .intro {
   padding-top: 3.5rem; }
+  .intro .column em {
+    font-family: "majesti_bannerlight_italic";
+    font-size: 30px; }
 
 .event-block {
   background: #fff;
-  bottom: 20px;
-  height: auto;
-  max-height: 450px;
-  min-height: 400px;
-  min-width: 400px;
   padding: 4rem 4rem 5rem 5rem;
-  position: absolute;
-  right: -25%;
-  top: 50px;
+  -webkit-transform: translate(70%, 0);
+  -ms-transform: translate(70%, 0);
+  transform: translate(70%, 0);
+  transition: all 1s ease-in-out;
   width: 40%;
   z-index: 10; }
+  .scroll .event-block {
+    -webkit-transform: translate(calc(100vw - 56%), 0);
+    -ms-transform: translate(calc(100vw - 56%), 0);
+    transform: translate(calc(100vw - 56%), 0); }
   .event-block h2 {
     font-size: 2.5rem;
     margin-top: 0;
@@ -585,20 +626,24 @@ section {
     margin-bottom: 2rem; }
     .event-block li a {
       display: inline-block;
-      font-family: "playfair_displaybold";
-      font-size: 1.5rem; }
+      font-family: "playfair_displaybold"; }
     .event-block li span {
       display: block;
-      font-size: 17px; }
+      font-size: 14px; }
 
 .sermon-banner {
   color: #fff !important;
-  font-size: 50% !important;
-  position: absolute;
-  bottom: 30px;
-  left: 0;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
   padding: 3rem;
   z-index: 10; }
+  .sermon-banner h2 {
+    font-size: 42px;
+    margin-bottom: 12px; }
+  .sermon-banner p {
+    font-size: 20px;
+    line-height: 30px; }
 
 .news-link {
   margin: 0 0 5rem;
@@ -742,7 +787,8 @@ figure + h6 {
   font-weight: 300; }
 
 b, strong {
-  color: #141A1A; }
+  color: #141A1A;
+  font-weight: 100; }
 
 ul, ol,
 ul ul,
@@ -778,9 +824,11 @@ hr {
 
 blockquote {
   padding-left: 24px;
+  padding-right: 24px;
   border-left: 2px solid rgba(0, 0, 0, 0.125);
+  border-right: 2px solid rgba(0, 0, 0, 0.125);
   font-style: italic;
-  color: rgba(0, 0, 0, 0.65); }
+  color: #004462; }
 
 pre, code, samp, var, kbd {
   font-family: Consolas, Monaco, "Courier New", monospace;
@@ -862,20 +910,6 @@ sup {
 sub {
   bottom: -2px; }
 
-article h2 {
-  position: relative; }
-  article h2:after {
-    background: #C44427;
-    bottom: -3.55rem;
-    content: "";
-    height: 3px;
-    left: 0;
-    position: absolute;
-    width: 3rem; }
-
-article.article-wrap h2:after {
-  background: none; }
-
 /*
 ============================================================================
 16 Column GRID
@@ -896,7 +930,7 @@ article.article-wrap h2:after {
 15 -  93.75
 16 -  100
 ============================================================================
- */
+*/
 /*******************************
 ********* Breakpoints **********
 
@@ -993,7 +1027,6 @@ article.article-wrap h2:after {
   -ms-flex-basis: auto;
   -ms-flex-preferred-size: 0;
   flex-basis: auto;
-  width: 100%;
   padding: 2rem; }
   .column.no-pad {
     padding: 0; }
@@ -1077,7 +1110,7 @@ article.article-wrap h2:after {
 .offset-fifteen {
   margin-left: 0; }
 
-@media (min-width: 64rem) {
+@media (min-width: 75rem) {
   .one {
     -webkit-flex-basis: 6.25%;
     -ms-flex-preferred-size: 6.25%;
@@ -1225,7 +1258,6 @@ article.article-wrap h2:after {
     -ms-flex-basis: 0;
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
-    width: 100%;
     padding: 4rem 6rem; }
   .column.first {
     -webkit-order: -1;
@@ -1658,22 +1690,6 @@ button:hover,
   .button.primary.outline, .button.primary.outline:disabled:hover, .button.primary.outline.disabled:hover {
     color: #390c06;
     border-color: #390c06;
-    background: none; }
-
-.button.inverted {
-  background: #fff;
-  color: #000; }
-  .button.inverted:focus, .button.inverted:hover {
-    color: rgba(0, 0, 0, 0.6); }
-    .button.inverted:focus:disabled, .button.inverted:focus.disabled, .button.inverted:hover:disabled, .button.inverted:hover.disabled {
-      color: #000;
-      background: #fff; }
-  .button.inverted.outline:hover {
-    color: rgba(255, 255, 255, 0.6);
-    border-color: rgba(255, 255, 255, 0.4); }
-  .button.inverted.outline, .button.inverted.outline:disabled:hover, .button.inverted.outline.disabled:hover {
-    color: white;
-    border-color: white;
     background: none; }
 
 .buttons.group {
@@ -2919,7 +2935,7 @@ button:hover .menu-icon {
   display: block;
   color: #ffffff;
   line-height: 50px;
-  padding: 11px 40px; }
+  padding: 12px 24px; }
 
 .cd-secondary-nav .fabc-logo a {
   color: transparent;
@@ -2949,7 +2965,7 @@ button:hover .menu-icon {
     flex-shrink: 1; }
   .cd-secondary-nav a {
     line-height: 55px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 800; }
@@ -3050,24 +3066,16 @@ section {
   transition: all 1.5s ease-in-out; }
 
 .banner-wrap {
-  background: url("../img/banner/fabc-banner-01-bw.jpg");
+  background: url("../img/banner/fabc-banner-overlay-01.jpg");
   background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: calc(80vh - 110px);
   margin-top: 110px;
   position: relative;
-  width: 80%;
+  width: 100%;
   transition: all 1.5s ease-in-out; }
-  .banner-wrap:after {
-    background: rgba(0, 48, 64, 0.8);
-    content: "";
-    bottom: 0;
-    top: 0;
-    left: 0;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 1; }
 
 .welcome {
   font-size: 4rem;
@@ -3091,20 +3099,23 @@ section {
 
 .intro {
   padding-top: 3.5rem; }
+  .intro .column em {
+    font-family: "majesti_bannerlight_italic";
+    font-size: 30px; }
 
 .event-block {
   background: #fff;
-  bottom: 20px;
-  height: auto;
-  max-height: 450px;
-  min-height: 400px;
-  min-width: 400px;
   padding: 4rem 4rem 5rem 5rem;
-  position: absolute;
-  right: -25%;
-  top: 50px;
+  -webkit-transform: translate(70%, 0);
+  -ms-transform: translate(70%, 0);
+  transform: translate(70%, 0);
+  transition: all 1s ease-in-out;
   width: 40%;
   z-index: 10; }
+  .scroll .event-block {
+    -webkit-transform: translate(calc(100vw - 56%), 0);
+    -ms-transform: translate(calc(100vw - 56%), 0);
+    transform: translate(calc(100vw - 56%), 0); }
   .event-block h2 {
     font-size: 2.5rem;
     margin-top: 0;
@@ -3122,20 +3133,24 @@ section {
     margin-bottom: 2rem; }
     .event-block li a {
       display: inline-block;
-      font-family: "playfair_displaybold";
-      font-size: 1.5rem; }
+      font-family: "playfair_displaybold"; }
     .event-block li span {
       display: block;
-      font-size: 17px; }
+      font-size: 14px; }
 
 .sermon-banner {
   color: #fff !important;
-  font-size: 50% !important;
-  position: absolute;
-  bottom: 30px;
-  left: 0;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
   padding: 3rem;
   z-index: 10; }
+  .sermon-banner h2 {
+    font-size: 42px;
+    margin-bottom: 12px; }
+  .sermon-banner p {
+    font-size: 20px;
+    line-height: 30px; }
 
 .news-link {
   margin: 0 0 5rem;
@@ -3169,13 +3184,9 @@ section {
   background: url("../img/fabc-banner-01-fade.jpg"); }
 
 .intro {
-  background: #fff;
+  background: transparent;
   opacity: 0;
   transition: 1s, background-color 2s linear; }
-
-.event-block {
-  transition: all 1s;
-  opacity: 1; }
 
 .pastor {
   opacity: 0;
@@ -3196,7 +3207,8 @@ section {
   right: -50%; }
 
 .scroll .pastor {
-  opacity: 1; }
+  opacity: 1;
+  margin-top: -136px; }
 
 .welcome-two {
   height: 0;
@@ -3378,7 +3390,7 @@ button {
     background: rgba(255, 255, 255, 0.5) !important;
     bottom: -3.45rem;
     content: "";
-    height: 3px;
+    height: 1px;
     left: 0;
     position: absolute;
     width: 3rem; }

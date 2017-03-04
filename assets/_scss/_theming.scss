@@ -1,6 +1,6 @@
-:root {
-  font-size: calc(1vw + 1vh + .5vmin);
-}
+//:root {
+//  font-size: calc(1vw + 1vh + .5vmin);
+//}
 
 html {
   //background: url("../../assets/img/body-bg.png") repeat;
@@ -13,4 +13,33 @@ body {
   font-size: $font-size-regular;
   color: $body-text-color;
   margin: 0;
+}
+
+
+article {
+
+  h2 {
+    position: relative;
+
+    &:after {
+      background: $color-tertiary;
+      bottom: -3.55rem;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 3rem;
+    }
+  }
+
+  &.article-wrap {
+
+    h2 {
+
+      &:after {
+        background: none;
+      }
+
+    }
+  }
 }

@@ -6,10 +6,10 @@
   transition: 1s, background-color 2s linear;
 }
 
-.event-block {
-  transition: all 1s;
-  opacity: 1;
-}
+//.event-block {
+//  transition: all 1s;
+//  opacity: 1;
+//}
 
 .pastor {
   opacity: 0;
@@ -55,6 +55,7 @@
   }
   .pastor {
     opacity: 1;
+    margin-top: -136px;
   }
 }
 

@@ -83,47 +83,47 @@ BREAKPOINTS
 
 
 
+//
+//@media only screen and (max-height: 740px) {
+//
+//  .news-link {
+//    top: 5px;
+//    margin-bottom: 2rem;
+//    padding-bottom: 0;
+//  }
+//}
 
-@media only screen and (max-height: 740px) {
 
-  .news-link {
-    top: 5px;
-    margin-bottom: 2rem;
-    padding-bottom: 0;
-  }
-}
-
-
-
-@media only screen and (max-height: 844px) {
-
-  .event-block {
-    max-height: 480px;
-    min-height: 400px;
-    top: 15px;
-    padding: 3rem 4rem 0 4rem;
-  }
-  .welcome h1 {
-    padding-top: 2rem;
-  }
-}
-
-@media only screen and (min-height: 845px) {
-
-  .event-block {
-    padding: 4rem 4rem 5rem 5rem;
-    top: 18px;
-    bottom: 5px;
-  }
-}
-
-@media only screen and (min-height: 924px) {
-
-  .event-block {
-    max-height: 500px;
-    min-height: 360px;
-    padding: 4rem 4rem 5rem 5rem;
-    top: 60px;
-    bottom: 30px;
-  }
-}
+//
+//@media only screen and (max-height: 844px) {
+//
+//  .event-block {
+//    //max-height: 480px;
+//    //min-height: 400px;
+//    top: 0;
+//    padding: 3rem 4rem 0 4rem;
+//  }
+//  .welcome h1 {
+//    padding-top: 2rem;
+//  }
+//}
+//
+//@media only screen and (min-height: 845px) {
+//
+//  .event-block {
+//    padding: 4rem 4rem 5rem 5rem;
+//    top: 0;
+//    bottom: 0;
+//  }
+//}
+//
+//@media only screen and (min-height: 924px) {
+//
+//  .event-block {
+//    //max-height: 500px;
+//    //min-height: 360px;
+//    padding: 4rem 4rem 5rem 5rem;
+//    top: 0;
+//    bottom:0;
+//  }
+//}

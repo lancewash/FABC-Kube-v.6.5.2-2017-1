@@ -46,7 +46,7 @@ $ui-font-size-big: $font-size-big !default;
 // Headings
 $title-font-size: 60px !default;
 $h1-font-size: 52px !default;
-$h2-font-size: 42px !default;
+$h2-font-size: 38px !default;
 $h3-font-size: 30px !default;
 $h4-font-size: 24px !default;
 $h5-font-size: 20px !default;
@@ -75,7 +75,9 @@ $input-append-text-color: #777 !default;
 $color-default: #f4f4f4 !default;
 $color-primary: #390C06 !default;
 $color-secondary: #C44427 !default;
+$color-secondary-dark: #5B1700 !default;
 $color-tertiary: #C44427 !default; //orange
+
 $color-black: #141A1A !default;
 $color-gray: #4D5C5C !default;
 $color-success: #60ae4d !default;
@@ -124,12 +126,12 @@ $fieldset-border-color: rgba(0, 0, 0, .1) !default;
 $fieldset-border-size: 1px !default;
 
 // Button
-$button-background-color: #C44427 !default;
+$button-background-color: #99351f !default;
 $button-font-weight: 600 !default;
 $button-outline-font-weight: normal !default;
 $button-outline-border-size: 1px !default;
 $button-padding-small: 6px 20px !default;
-$button-padding: 10px 5px !default;
+$button-padding: 14px 50px !default;
 $button-padding-big: 14px 48px !default;
 
 // Height

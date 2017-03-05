@@ -551,7 +551,8 @@ body::-webkit-scrollbar-thumb {
   list-style: none; }
 
 .inverted {
-  color: #fff; }
+  color: #fff;
+  transition: all .5s ease-in-out; }
   .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted ul, .inverted li, .inverted p, .inverted strong, .inverted em, .inverted a {
     color: #fff; }
 
@@ -564,8 +565,8 @@ section {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: calc(80vh - 110px);
-  margin-top: 110px;
+  height: calc(80vh - 124px);
+  margin-top: 124px;
   position: relative;
   width: 100%;
   transition: all 1.5s ease-in-out; }
@@ -598,38 +599,60 @@ section {
 
 .event-block {
   background: #fff;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  height: calc(100% - 140px);
   padding: 4rem 4rem 5rem 5rem;
-  -webkit-transform: translate(70%, 0);
-  -ms-transform: translate(70%, 0);
-  transform: translate(70%, 0);
+  -webkit-transform: translate(60%, 0);
+  -ms-transform: translate(60%, 0);
+  transform: translate(60%, 0);
   transition: all 1s ease-in-out;
-  width: 40%;
+  width: 50%;
   z-index: 10; }
+  .event-block ul {
+    margin-left: -1.75rem; }
   .scroll .event-block {
-    -webkit-transform: translate(calc(100vw - 56%), 0);
-    -ms-transform: translate(calc(100vw - 56%), 0);
-    transform: translate(calc(100vw - 56%), 0); }
+    -webkit-transform: translate(calc(100vw - 48%), 0);
+    -ms-transform: translate(calc(100vw - 48%), 0);
+    transform: translate(calc(100vw - 48%), 0); }
   .event-block h2 {
     font-size: 2.5rem;
     margin-top: 0;
-    margin-bottom: 4rem;
     position: relative; }
-    .event-block h2:after {
-      background: #C44427 !important;
-      bottom: -1.5rem;
-      content: "";
-      height: 3px;
-      left: 0;
-      position: absolute;
-      width: 3rem; }
   .event-block li {
     margin-bottom: 2rem; }
-    .event-block li a {
-      display: inline-block;
-      font-family: "playfair_displaybold"; }
     .event-block li span {
       display: block;
-      font-size: 14px; }
+      font-size: 14px;
+      font-weight: 600; }
+    .event-block li:hover span {
+      color: black;
+      transition: all .5s ease-in-out; }
+    .event-block li a {
+      display: inline-block;
+      font-family: "playfair_displaybold";
+      position: relative;
+      width: 50%; }
+      .event-block li a:before {
+        background: #C44427 !important;
+        bottom: 18px;
+        content: "";
+        height: 1px;
+        left: -50px;
+        position: absolute;
+        width: 2rem;
+        transition: all .25s ease-in-out; }
+      .event-block li a:hover:before {
+        background: #842e1a !important;
+        bottom: 10px;
+        content: "";
+        height: 1px;
+        left: -5px;
+        position: absolute;
+        width: 100%;
+        opacity: .5; }
 
 .sermon-banner {
   color: #fff !important;
@@ -639,26 +662,27 @@ section {
   padding: 3rem;
   z-index: 10; }
   .sermon-banner h2 {
-    font-size: 42px;
+    font-size: 38px;
     margin-bottom: 12px; }
   .sermon-banner p {
     font-size: 20px;
-    line-height: 30px; }
+    line-height: 30px;
+    margin-bottom: 50px; }
 
 .news-link {
-  margin: 0 0 5rem;
+  margin: 0 0 60px;
   padding: 0; }
-  .news-link span {
-    font-style: italic;
+  .news-link li span {
     position: relative; }
-    .news-link span:after {
+    .news-link li span:after {
       background: rgba(0, 0, 0, 0.2);
-      bottom: -10px;
+      bottom: -5px;
       content: "";
       height: 1px;
       left: 0;
       position: absolute;
-      width: 2.5rem; }
+      width: 2rem;
+      transition: all .25s ease-in-out; }
 
 .pastor p {
   text-align: center;
@@ -704,7 +728,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 42px;
+  font-size: 38px;
   line-height: 50px; }
 
 h3,
@@ -1044,14 +1068,6 @@ sub {
 .content-wrap {
   padding-left: 5rem; }
 
-.row-520 {
-  min-height: 520px; }
-  .row-520 .column {
-    position: relative; }
-    .row-520 .column .button {
-      bottom: 4rem;
-      position: absolute; }
-
 @media (max-width: 768px) {
   .column.first-on-small {
     -webkit-order: -1;
@@ -1310,6 +1326,19 @@ sub {
   [class^="offset-"],
   [class*=" offset-"] {
     margin-left: 0; } }
+
+.row-520 {
+  background: rgba(0, 0, 0, 0.05);
+  min-height: 520px; }
+  .row-520 .column {
+    position: relative; }
+    .row-520 .column .button {
+      bottom: 4rem;
+      position: absolute; }
+
+.column-dark {
+  background: rgba(0, 0, 0, 0.05);
+  position: relative; }
 
 table {
   border-collapse: collapse;
@@ -1606,25 +1635,25 @@ button,
   display: inline-block;
   letter-spacing: 1px;
   min-width: 12rem;
-  padding: 10px 5px;
+  padding: 14px 50px;
   vertical-align: middle;
   -webkit-appearance: none;
-  color: rgba(255, 255, 255, 0.9);
-  color: #C44427;
-  border-bottom: 1px solid #f3cdc4;
-  border-top: 1px solid #f3cdc4;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
   text-transform: uppercase;
   text-align: center;
-  text-align: left;
   -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  background: #99351f;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25); }
   button.inverse,
   .button.inverse {
+    background: transparent;
     color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.25); }
+    border: 1px solid rgba(255, 255, 255, 0.25); }
+    button.inverse:hover,
+    .button.inverse:hover {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.5); }
 
 input.button {
   height: auto; }
@@ -1632,7 +1661,9 @@ input.button {
 button:hover,
 .button:hover {
   outline: none;
-  text-decoration: none; }
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.75); }
 
 .button:disabled,
 .button.disabled {
@@ -2935,7 +2966,7 @@ button:hover .menu-icon {
   display: block;
   color: #ffffff;
   line-height: 50px;
-  padding: 12px 24px; }
+  padding: 12px 40px; }
 
 .cd-secondary-nav .fabc-logo a {
   color: transparent;
@@ -2956,13 +2987,18 @@ button:hover .menu-icon {
     float: right;
     margin: auto;
     max-width: 100rem;
-    text-align: center; }
+    text-align: center;
+    transition: all .35s ease-in-out; }
   .cd-secondary-nav li {
     /* reset mobile style */
     float: none;
     -webkit-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1; }
+    .cd-secondary-nav li:last-child a {
+      background: #4c1300; }
+      .cd-secondary-nav li:last-child a:hover {
+        background: #5B1700; }
   .cd-secondary-nav a {
     line-height: 55px;
     font-size: 1rem;
@@ -3071,8 +3107,8 @@ section {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: calc(80vh - 110px);
-  margin-top: 110px;
+  height: calc(80vh - 124px);
+  margin-top: 124px;
   position: relative;
   width: 100%;
   transition: all 1.5s ease-in-out; }
@@ -3105,38 +3141,60 @@ section {
 
 .event-block {
   background: #fff;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  height: calc(100% - 140px);
   padding: 4rem 4rem 5rem 5rem;
-  -webkit-transform: translate(70%, 0);
-  -ms-transform: translate(70%, 0);
-  transform: translate(70%, 0);
+  -webkit-transform: translate(60%, 0);
+  -ms-transform: translate(60%, 0);
+  transform: translate(60%, 0);
   transition: all 1s ease-in-out;
-  width: 40%;
+  width: 50%;
   z-index: 10; }
+  .event-block ul {
+    margin-left: -1.75rem; }
   .scroll .event-block {
-    -webkit-transform: translate(calc(100vw - 56%), 0);
-    -ms-transform: translate(calc(100vw - 56%), 0);
-    transform: translate(calc(100vw - 56%), 0); }
+    -webkit-transform: translate(calc(100vw - 48%), 0);
+    -ms-transform: translate(calc(100vw - 48%), 0);
+    transform: translate(calc(100vw - 48%), 0); }
   .event-block h2 {
     font-size: 2.5rem;
     margin-top: 0;
-    margin-bottom: 4rem;
     position: relative; }
-    .event-block h2:after {
-      background: #C44427 !important;
-      bottom: -1.5rem;
-      content: "";
-      height: 3px;
-      left: 0;
-      position: absolute;
-      width: 3rem; }
   .event-block li {
     margin-bottom: 2rem; }
-    .event-block li a {
-      display: inline-block;
-      font-family: "playfair_displaybold"; }
     .event-block li span {
       display: block;
-      font-size: 14px; }
+      font-size: 14px;
+      font-weight: 600; }
+    .event-block li:hover span {
+      color: black;
+      transition: all .5s ease-in-out; }
+    .event-block li a {
+      display: inline-block;
+      font-family: "playfair_displaybold";
+      position: relative;
+      width: 50%; }
+      .event-block li a:before {
+        background: #C44427 !important;
+        bottom: 18px;
+        content: "";
+        height: 1px;
+        left: -50px;
+        position: absolute;
+        width: 2rem;
+        transition: all .25s ease-in-out; }
+      .event-block li a:hover:before {
+        background: #842e1a !important;
+        bottom: 10px;
+        content: "";
+        height: 1px;
+        left: -5px;
+        position: absolute;
+        width: 100%;
+        opacity: .5; }
 
 .sermon-banner {
   color: #fff !important;
@@ -3146,26 +3204,27 @@ section {
   padding: 3rem;
   z-index: 10; }
   .sermon-banner h2 {
-    font-size: 42px;
+    font-size: 38px;
     margin-bottom: 12px; }
   .sermon-banner p {
     font-size: 20px;
-    line-height: 30px; }
+    line-height: 30px;
+    margin-bottom: 50px; }
 
 .news-link {
-  margin: 0 0 5rem;
+  margin: 0 0 60px;
   padding: 0; }
-  .news-link span {
-    font-style: italic;
+  .news-link li span {
     position: relative; }
-    .news-link span:after {
+    .news-link li span:after {
       background: rgba(0, 0, 0, 0.2);
-      bottom: -10px;
+      bottom: -5px;
       content: "";
       height: 1px;
       left: 0;
       position: absolute;
-      width: 2.5rem; }
+      width: 2rem;
+      transition: all .25s ease-in-out; }
 
 .pastor p {
   text-align: center;

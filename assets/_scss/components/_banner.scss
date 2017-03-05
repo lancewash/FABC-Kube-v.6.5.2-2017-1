@@ -9,8 +9,8 @@ section {
   background: url("../img/banner/fabc-banner-overlay-01.jpg");
   background-size: cover;
   display: flex;
-  height: calc(80vh - 110px);
-  margin-top: 110px;
+  height: calc(80vh - 124px);
+  margin-top: 124px;
   position: relative;
   width: 100%;
   transition: all 1.5s ease-in-out;
@@ -87,6 +87,8 @@ section {
 
 .event-block {
   background: #fff;
+  align-self: center;
+  height: calc(100% - 140px);
   //bottom: 0;
   //height: calc(100vh - 120px - 20vh);
   //max-height: 450px;
@@ -97,44 +99,81 @@ section {
   //right: 2rem;
   //right: -15%;
   //top: 0;
-  transform: translate(70%, 0);
+  transform: translate(60%, 0);
   transition: all 1s ease-in-out;
-  width: 40%;
+  width: 50%;
   z-index: 10;
 
+  ul {
+    margin-left: -1.75rem;
+  }
+
   .scroll & {
-    transform: translate(calc(100vw - 56%), 0);
+    transform: translate(calc(100vw - 48%), 0);
   }
 
   h2 {
     font-size: 2.5rem;
     margin-top: 0;
-    margin-bottom: 4rem;
+    //margin-bottom: 36px;
     position: relative;
 
-    &:after {
-      background: $color-tertiary !important;
-      bottom: -1.5rem;
-      content: "";
-      height: 3px;
-      left: 0;
-      position: absolute;
-      width: 3rem;
-    }
+    //&:after {
+    //  background: $color-tertiary !important;
+    //  bottom: -3.5rem;
+    //  content: "";
+    //  height: 1px;
+    //  left: 0;
+    //  position: absolute;
+    //  width: 3rem;
+    //}
   }
 
   li {
     margin-bottom: 2rem;
 
-    a {
-      display: inline-block;
-      font-family: $heading-font-family;
-      //font-size: 1.5rem;
-    }
-
     span {
       display: block;
       font-size: $font-size-small;
+      font-weight: 600;
+    }
+
+    &:hover {
+
+      span {
+        color: rgba(0,0,0,1);
+        transition: all .5s ease-in-out;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-family: $heading-font-family;
+      position: relative;
+      width: 50%;
+      //font-size: 1.5rem;
+
+      &:before {
+        background: $color-tertiary !important;
+        bottom: 18px;
+        content: "";
+        height: 1px;
+        left: -50px;
+        position: absolute;
+        width: 2rem;
+        transition: all .25s ease-in-out;
+      }
+
+      &:hover:before {
+        background: darken($color-tertiary, 15%) !important;
+        bottom: 10px;
+        content: "";
+        height: 1px;
+        left: -5px;
+        position: absolute;
+        width: 100%;
+        opacity: .5;
+      }
     }
   }
 }
@@ -156,26 +195,36 @@ section {
 
   p {
     font-size: $font-size-regular + 4px;
-    line-height: $base-line + 6px ;
+    line-height: $base-line + 6px;
+    margin-bottom: 50px;
   }
 }
 .news-link {
-  margin: 0 0 5rem;
+  margin: 0 0 60px;
   padding: 0;
 
-  span {
-    font-style: italic;
-    position: relative;
+  li {
 
-    &:after {
-      background: rgba(0, 0, 0, .2);
-      bottom: -10px;
-      content: "";
-      height: 1px;
-      left: 0;
-      position: absolute;
-      width: 2.5rem;
+    span {
+      position: relative;
+
+      &:after {
+        background: rgba(0, 0, 0, .2);
+        bottom: -5px;
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 2rem;
+        transition: all .25s ease-in-out;
+      }
     }
+
+    //&:hover span:after {
+    //  background: rgba(0, 0, 0, .5);
+    //  bottom: 0;
+    //  width: 3rem;
+    //}
   }
 }
 

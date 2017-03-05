@@ -1,0 +1,31 @@
+
+.row-520 {
+  background: rgba(0,0,0,.05);
+  //background: url("../img/fabc-banner-01-fade.jpg");
+  min-height: 520px;
+
+  .column {
+    position: relative;
+
+    .button {
+      bottom: 4rem;
+      position: absolute;
+    }
+  }
+
+}
+
+.column-dark {
+  background: rgba(0,0,0,.05);
+  position: relative;
+  
+  //&:before {
+  //  content: "";
+  //  position: absolute;
+  //  height: 100%;
+  //  top: 0;
+  //  left: 0;
+  //  width: 1px;
+  //  background: rgba(0,0,0,.15);
+  //}
+}

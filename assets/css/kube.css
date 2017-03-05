@@ -597,7 +597,7 @@ section {
     font-family: "majesti_bannerlight_italic";
     font-size: 30px; }
 
-.event-block {
+.event-block.off-canvas {
   background: #fff;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -611,31 +611,32 @@ section {
   transition: all 1s ease-in-out;
   width: 50%;
   z-index: 10; }
-  .event-block ul {
+  .event-block.off-canvas ul {
     margin-left: -1.75rem; }
-  .scroll .event-block {
+  .scroll .event-block.off-canvas {
     -webkit-transform: translate(calc(100vw - 48%), 0);
     -ms-transform: translate(calc(100vw - 48%), 0);
     transform: translate(calc(100vw - 48%), 0); }
-  .event-block h2 {
+  .event-block.off-canvas h2 {
     font-size: 2.5rem;
     margin-top: 0;
     position: relative; }
-  .event-block li {
+  .event-block.off-canvas li {
     margin-bottom: 2rem; }
-    .event-block li span {
+    .event-block.off-canvas li span {
       display: block;
       font-size: 14px;
       font-weight: 600; }
-    .event-block li:hover span {
+    .event-block.off-canvas li:hover span {
       color: black;
       transition: all .5s ease-in-out; }
-    .event-block li a {
+    .event-block.off-canvas li a {
       display: inline-block;
       font-family: "playfair_displaybold";
+      font-size: 1.25rem;
       position: relative;
       width: 50%; }
-      .event-block li a:before {
+      .event-block.off-canvas li a:before {
         background: #C44427 !important;
         bottom: 18px;
         content: "";
@@ -644,7 +645,7 @@ section {
         position: absolute;
         width: 2rem;
         transition: all .25s ease-in-out; }
-      .event-block li a:hover:before {
+      .event-block.off-canvas li a:hover:before {
         background: #842e1a !important;
         bottom: 10px;
         content: "";
@@ -1327,18 +1328,28 @@ sub {
   [class*=" offset-"] {
     margin-left: 0; } }
 
-.row-520 {
+.row-580 {
   background: rgba(0, 0, 0, 0.05);
-  min-height: 520px; }
-  .row-520 .column {
+  min-height: 580px; }
+  .row-580 .column {
     position: relative; }
-    .row-520 .column .button {
+    .row-580 .column .button {
       bottom: 4rem;
       position: absolute; }
 
 .column-dark {
   background: rgba(0, 0, 0, 0.05);
   position: relative; }
+
+.content-links ul {
+  list-style-type: none;
+  margin-left: 0; }
+
+.content-links li a {
+  font-family: "playfair_displaybold";
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 1rem; }
 
 table {
   border-collapse: collapse;
@@ -3139,7 +3150,7 @@ section {
     font-family: "majesti_bannerlight_italic";
     font-size: 30px; }
 
-.event-block {
+.event-block.off-canvas {
   background: #fff;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -3153,31 +3164,32 @@ section {
   transition: all 1s ease-in-out;
   width: 50%;
   z-index: 10; }
-  .event-block ul {
+  .event-block.off-canvas ul {
     margin-left: -1.75rem; }
-  .scroll .event-block {
+  .scroll .event-block.off-canvas {
     -webkit-transform: translate(calc(100vw - 48%), 0);
     -ms-transform: translate(calc(100vw - 48%), 0);
     transform: translate(calc(100vw - 48%), 0); }
-  .event-block h2 {
+  .event-block.off-canvas h2 {
     font-size: 2.5rem;
     margin-top: 0;
     position: relative; }
-  .event-block li {
+  .event-block.off-canvas li {
     margin-bottom: 2rem; }
-    .event-block li span {
+    .event-block.off-canvas li span {
       display: block;
       font-size: 14px;
       font-weight: 600; }
-    .event-block li:hover span {
+    .event-block.off-canvas li:hover span {
       color: black;
       transition: all .5s ease-in-out; }
-    .event-block li a {
+    .event-block.off-canvas li a {
       display: inline-block;
       font-family: "playfair_displaybold";
+      font-size: 1.25rem;
       position: relative;
       width: 50%; }
-      .event-block li a:before {
+      .event-block.off-canvas li a:before {
         background: #C44427 !important;
         bottom: 18px;
         content: "";
@@ -3186,7 +3198,7 @@ section {
         position: absolute;
         width: 2rem;
         transition: all .25s ease-in-out; }
-      .event-block li a:hover:before {
+      .event-block.off-canvas li a:hover:before {
         background: #842e1a !important;
         bottom: 10px;
         content: "";

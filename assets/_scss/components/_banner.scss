@@ -86,98 +86,101 @@ section {
 }
 
 .event-block {
-  background: #fff;
-  align-self: center;
-  height: calc(100% - 140px);
-  //bottom: 0;
-  //height: calc(100vh - 120px - 20vh);
-  //max-height: 450px;
-  //min-height: 400px;
-  //min-width: 400px;
-  padding: 4rem 4rem 5rem 5rem;
-  //position: absolute;
-  //right: 2rem;
-  //right: -15%;
-  //top: 0;
-  transform: translate(60%, 0);
-  transition: all 1s ease-in-out;
-  width: 50%;
-  z-index: 10;
 
-  ul {
-    margin-left: -1.75rem;
-  }
+  &.off-canvas {
+    background: #fff;
+    align-self: center;
+    height: calc(100% - 140px);
+    //bottom: 0;
+    //height: calc(100vh - 120px - 20vh);
+    //max-height: 450px;
+    //min-height: 400px;
+    //min-width: 400px;
+    padding: 4rem 4rem 5rem 5rem;
+    //position: absolute;
+    //right: 2rem;
+    //right: -15%;
+    //top: 0;
+    transform: translate(60%, 0);
+    transition: all 1s ease-in-out;
+    width: 50%;
+    z-index: 10;
 
-  .scroll & {
-    transform: translate(calc(100vw - 48%), 0);
-  }
-
-  h2 {
-    font-size: 2.5rem;
-    margin-top: 0;
-    //margin-bottom: 36px;
-    position: relative;
-
-    //&:after {
-    //  background: $color-tertiary !important;
-    //  bottom: -3.5rem;
-    //  content: "";
-    //  height: 1px;
-    //  left: 0;
-    //  position: absolute;
-    //  width: 3rem;
-    //}
-  }
-
-  li {
-    margin-bottom: 2rem;
-
-    span {
-      display: block;
-      font-size: $font-size-small;
-      font-weight: 600;
+    ul {
+      margin-left: -1.75rem;
     }
 
-    &:hover {
+    .scroll & {
+      transform: translate(calc(100vw - 48%), 0);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-top: 0;
+      //margin-bottom: 36px;
+      position: relative;
+
+      //&:after {
+      //  background: $color-tertiary !important;
+      //  bottom: -3.5rem;
+      //  content: "";
+      //  height: 1px;
+      //  left: 0;
+      //  position: absolute;
+      //  width: 3rem;
+      //}
+    }
+
+    li {
+      margin-bottom: 2rem;
 
       span {
-        color: rgba(0,0,0,1);
-        transition: all .5s ease-in-out;
-      }
-    }
-
-    a {
-      display: inline-block;
-      font-family: $heading-font-family;
-      position: relative;
-      width: 50%;
-      //font-size: 1.5rem;
-
-      &:before {
-        background: $color-tertiary !important;
-        bottom: 18px;
-        content: "";
-        height: 1px;
-        left: -50px;
-        position: absolute;
-        width: 2rem;
-        transition: all .25s ease-in-out;
+        display: block;
+        font-size: $font-size-small;
+        font-weight: 600;
       }
 
-      &:hover:before {
-        background: darken($color-tertiary, 15%) !important;
-        bottom: 10px;
-        content: "";
-        height: 1px;
-        left: -5px;
-        position: absolute;
-        width: 100%;
-        opacity: .5;
+      &:hover {
+
+        span {
+          color: rgba(0, 0, 0, 1);
+          transition: all .5s ease-in-out;
+        }
+      }
+
+      a {
+        display: inline-block;
+        font-family: $heading-font-family;
+        font-size: 1.25rem;
+        position: relative;
+        width: 50%;
+        //font-size: 1.5rem;
+
+        &:before {
+          background: $color-tertiary !important;
+          bottom: 18px;
+          content: "";
+          height: 1px;
+          left: -50px;
+          position: absolute;
+          width: 2rem;
+          transition: all .25s ease-in-out;
+        }
+
+        &:hover:before {
+          background: darken($color-tertiary, 15%) !important;
+          bottom: 10px;
+          content: "";
+          height: 1px;
+          left: -5px;
+          position: absolute;
+          width: 100%;
+          opacity: .5;
+        }
       }
     }
   }
 }
-
 
 .sermon-banner {
   color: #fff !important;

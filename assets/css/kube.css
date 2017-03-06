@@ -647,7 +647,7 @@ section {
         transition: all .25s ease-in-out; }
       .event-block.off-canvas li a:hover:before {
         background: #842e1a !important;
-        bottom: 10px;
+        bottom: 12px;
         content: "";
         height: 1px;
         left: -5px;
@@ -3200,7 +3200,7 @@ section {
         transition: all .25s ease-in-out; }
       .event-block.off-canvas li a:hover:before {
         background: #842e1a !important;
-        bottom: 10px;
+        bottom: 12px;
         content: "";
         height: 1px;
         left: -5px;

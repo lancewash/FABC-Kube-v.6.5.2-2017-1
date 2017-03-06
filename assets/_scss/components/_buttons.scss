@@ -27,11 +27,11 @@ button,
 	text-transform: uppercase;
 	text-align: center;
 	//text-align: left;
-	@include transition(all .3s ease-in-out);
-
+	@include transition(all .2s ease-in-out);
+	box-shadow: 0 4px 8px rgba(0,0,0,.2);
 	background: $button-background-color;
 	color: #fff;
-	border: 1px solid rgba(255,255,255,.25);
+	border: 1px solid $button-background-color;
 
 	//.event-block & {
 	//	position: absolute;
@@ -58,7 +58,16 @@ button:hover,
     outline: none;
 	color: rgba(255,255,255,.75);
 	text-decoration: none;
-	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.75);
+	box-shadow: 0 8px 16px rgba(0,0,0,.5);
+	border: 1px solid rgba(255,255,255,.5);
+}
+
+button:active,
+.button:active {
+	background: darken($button-background-color, 10%);
+	color: #fff;
+	box-shadow: none;
+	border: 1px solid rgba(255,255,255,.75);
 }
 
 .button:disabled,

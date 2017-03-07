@@ -582,7 +582,7 @@ section {
     font-size: 4rem;
     line-height: 42px;
     margin: 0;
-    padding-top: 3.25rem;
+    padding-top: 3rem;
     transition: all 1s ease-in-out; }
   .welcome span {
     font-size: 1.5rem;
@@ -3168,7 +3168,7 @@ section {
     font-size: 4rem;
     line-height: 42px;
     margin: 0;
-    padding-top: 3.25rem;
+    padding-top: 3rem;
     transition: all 1s ease-in-out; }
   .welcome span {
     font-size: 1.5rem;
@@ -3312,7 +3312,11 @@ section {
 
 .scroll .pastor {
   opacity: 1;
-  margin-top: -136px; }
+  margin-top: -196px; }
+
+.scroll .sermon-banner .button.inverse {
+  margin-left: 100%;
+  transition: all 1s ease-out; }
 
 .welcome-two {
   height: 0;

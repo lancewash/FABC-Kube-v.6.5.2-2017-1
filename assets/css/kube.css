@@ -657,7 +657,7 @@ section {
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  margin-left: 30%;
+  margin-left: 25%;
   padding: 3rem 5rem;
   text-align: right;
   z-index: 10; }
@@ -3242,7 +3242,7 @@ section {
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  margin-left: 30%;
+  margin-left: 25%;
   padding: 3rem 5rem;
   text-align: right;
   z-index: 10; }

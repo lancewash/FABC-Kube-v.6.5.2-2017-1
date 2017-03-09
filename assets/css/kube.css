@@ -600,17 +600,15 @@ section {
 
 .event-block.off-canvas {
   background: #fff;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  height: calc(100% - 140px);
-  padding: 4rem 4rem 5rem 5rem;
-  -webkit-transform: translate(60%, 0);
-  -ms-transform: translate(60%, 0);
-  transform: translate(60%, 0);
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  padding: 4rem 3rem 3rem 5rem;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
   transition: all 1s ease-in-out;
-  width: 50%;
+  width: 100%;
   z-index: 10; }
   .event-block.off-canvas ul {
     margin-left: -1.75rem; }
@@ -631,14 +629,13 @@ section {
       color: black;
       transition: all .5s ease-in-out; }
     .event-block.off-canvas li a {
-      display: inline-block;
       font-family: "playfair_displaybold";
       font-size: 1.25rem;
       position: relative;
-      width: 50%; }
+      width: 75%; }
       .event-block.off-canvas li a:before {
         background: #C44427 !important;
-        bottom: 18px;
+        bottom: 11px;
         content: "";
         height: 1px;
         left: -50px;
@@ -647,7 +644,7 @@ section {
         transition: all .25s ease-in-out; }
       .event-block.off-canvas li a:hover:before {
         background: #842e1a !important;
-        bottom: 12px;
+        bottom: 4px;
         content: "";
         height: 1px;
         left: -5px;
@@ -660,7 +657,9 @@ section {
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  padding: 3rem;
+  margin-left: 30%;
+  padding: 3rem 5rem;
+  text-align: right;
   z-index: 10; }
   .sermon-banner h2 {
     font-size: 2rem;
@@ -3186,17 +3185,15 @@ section {
 
 .event-block.off-canvas {
   background: #fff;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  height: calc(100% - 140px);
-  padding: 4rem 4rem 5rem 5rem;
-  -webkit-transform: translate(60%, 0);
-  -ms-transform: translate(60%, 0);
-  transform: translate(60%, 0);
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  padding: 4rem 3rem 3rem 5rem;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
   transition: all 1s ease-in-out;
-  width: 50%;
+  width: 100%;
   z-index: 10; }
   .event-block.off-canvas ul {
     margin-left: -1.75rem; }
@@ -3217,14 +3214,13 @@ section {
       color: black;
       transition: all .5s ease-in-out; }
     .event-block.off-canvas li a {
-      display: inline-block;
       font-family: "playfair_displaybold";
       font-size: 1.25rem;
       position: relative;
-      width: 50%; }
+      width: 75%; }
       .event-block.off-canvas li a:before {
         background: #C44427 !important;
-        bottom: 18px;
+        bottom: 11px;
         content: "";
         height: 1px;
         left: -50px;
@@ -3233,7 +3229,7 @@ section {
         transition: all .25s ease-in-out; }
       .event-block.off-canvas li a:hover:before {
         background: #842e1a !important;
-        bottom: 12px;
+        bottom: 4px;
         content: "";
         height: 1px;
         left: -5px;
@@ -3246,7 +3242,9 @@ section {
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  padding: 3rem;
+  margin-left: 30%;
+  padding: 3rem 5rem;
+  text-align: right;
   z-index: 10; }
   .sermon-banner h2 {
     font-size: 2rem;
@@ -3313,10 +3311,6 @@ section {
 .scroll .pastor {
   opacity: 1;
   margin-top: -196px; }
-
-.scroll .sermon-banner .button.inverse {
-  margin-left: 100%;
-  transition: all 1s ease-out; }
 
 .welcome-two {
   height: 0;

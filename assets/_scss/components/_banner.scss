@@ -89,21 +89,21 @@ section {
 
   &.off-canvas {
     background: #fff;
-    align-self: center;
-    height: calc(100% - 140px);
+    align-self: flex-end;
+    //height: calc(100% - 140px);
     //bottom: 0;
     //height: calc(100vh - 120px - 20vh);
     //max-height: 450px;
     //min-height: 400px;
     //min-width: 400px;
-    padding: 4rem 4rem 5rem 5rem;
+    padding: 4rem 3rem 3rem 5rem;
     //position: absolute;
     //right: 2rem;
     //right: -15%;
     //top: 0;
-    transform: translate(60%, 0);
+    transform: translate(0, 0);
     transition: all 1s ease-in-out;
-    width: 50%;
+    width: 100%;
     z-index: 10;
 
     ul {
@@ -149,16 +149,16 @@ section {
       }
 
       a {
-        display: inline-block;
+        //display: inline-block;
         font-family: $heading-font-family;
         font-size: 1.25rem;
         position: relative;
-        width: 50%;
+        width: 75%;
         //font-size: 1.5rem;
 
         &:before {
           background: $color-tertiary !important;
-          bottom: 18px;
+          bottom: 11px;
           content: "";
           height: 1px;
           left: -50px;
@@ -169,7 +169,7 @@ section {
 
         &:hover:before {
           background: darken($color-tertiary, 15%) !important;
-          bottom: 12px;
+          bottom: 4px;
           content: "";
           height: 1px;
           left: -5px;
@@ -185,10 +185,12 @@ section {
 .sermon-banner {
   color: #fff !important;
   align-self: flex-end;
+  margin-left: 30%;
   //position: absolute;
   //bottom: 30px;
   //left: 0;
-  padding: 3rem;
+  padding: 3rem 5rem;
+  text-align: right;
   z-index: 10;
 
   h2 {

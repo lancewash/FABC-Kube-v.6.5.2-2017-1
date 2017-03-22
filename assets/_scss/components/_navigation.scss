@@ -82,6 +82,10 @@
     left: auto;
     right: auto;
     max-width: $max-width;
+
+    .scroll & {
+      top: -44px;
+    }
   }
 }
 

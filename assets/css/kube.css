@@ -391,10 +391,10 @@ article.article-wrap h2:after {
   animation-name: rotate; }
 
 /*
-================== Media Query Breakpoints =================
+================== Media Query Breakwidths =================
 */
 /*******************************
-********* Breakpoints **********
+********* Breakwidths **********
 
        xsmall-:   0
         small-:   30rem  (480px)
@@ -410,10 +410,10 @@ article.article-wrap h2:after {
     // small:  "(max-width: 736px)"
     // xsmall: "(max-width: 480px)"
 
-********* Breakpoints *********
+********* Breakwidths *********
 *******************************/
 /*********************
-BREAKPOINTS
+BREAKwidthS
 *********************/
 /*
 =======================================================================
@@ -3303,9 +3303,6 @@ section {
   background: #081F27;
   opacity: 1;
   padding: 0 0 4rem; }
-  @media (min-width: 64rem) {
-    .scroll .intro {
-      background: #fff; } }
 
 .scroll .event-block {
   right: -50%; }

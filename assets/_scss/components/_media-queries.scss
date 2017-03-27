@@ -1,10 +1,10 @@
 
 /*
-================== Media Query Breakpoints =================
+================== Media Query Breakwidths =================
 */
 
 /*******************************
-********* Breakpoints **********
+********* Breakwidths **********
 
        xsmall-:   0
         small-:   30rem  (480px)
@@ -20,64 +20,86 @@
     // small:  "(max-width: 736px)"
     // xsmall: "(max-width: 480px)"
 
-********* Breakpoints *********
+********* Breakwidths *********
 *******************************/
 
-//$breakpoint-small: 30rem;
-//@media (min-width: $breakpoint-small) {
+//$breakwidth-small: 30rem;
+//@media (min-width: $breakwidth-small) {
 //}
 //
-//$breakpoint-medium: 40rem;
-//@media (min-width: $breakpoint-medium) {
+//$breakwidth-medium: 40rem;
+//@media (min-width: $breakwidth-medium) {
 //}
 //
-//$breakpoint-large: 64rem;
-//@media (min-width: $breakpoint-large) {
+//$breakwidth-large: 64rem;
+//@media (min-width: $breakwidth-large) {
 //}
 //
-//$breakpoint-xlarge: 75rem;
-//@media (min-width: $breakpoint-xlarge) {
+//$breakwidth-xlarge: 75rem;
+//@media (min-width: $breakwidth-xlarge) {
 //}
 //
-//$breakpoint-xxlarge: 90rem;
-//@media (min-width: $breakpoint-xxlarge) {
+//$breakwidth-xxlarge: 90rem;
+//@media (min-width: $breakwidth-xxlarge) {
 //}
 //
-//$breakpoint-xxxlarge: 105rem;
-//@media (min-width: $breakpoint-xxxlarge) {
+//$breakwidth-xxxlarge: 105rem;
+//@media (min-width: $breakwidth-xxxlarge) {
 //}
 
 
-//$breakpoint-small: "screen and (min-width: 30rem";
+//$breakwidth-small: "screen and (min-width: 30rem";
 //
-//@media #{$breakpoint-small} {
+//@media #{$breakwidth-small} {
 //
 //}
 
 
 /*********************
-BREAKPOINTS
+BREAKwidthS
 *********************/
 
-@mixin breakpoint($point) {
+@mixin breakpoint-width($width) {
 
-  @if $point == xxxlarge{
-    @media (min-width: 105rem) { @content ; }
+  @if $width == xxx-lg {
+    @media (min-width: 105rem) { @content ; }  // 1680px
   }
-  @else if $point == xxlarge {
-    @media (min-width: 90rem) { @content ; }
+  @else if $width == xx-lg {
+    @media (min-width: 90rem) { @content ; }   // 1440px
   }
-  @else if $point == xlarge {
-    @media (min-width: 75rem) { @content ; }
+  @else if $width == x-lg {
+    @media (min-width: 75rem) { @content ; }  // 1200px
   }
-  @else if $point == large {
-    @media (min-width: 64rem)  { @content ; }
+  @else if $width == lg {
+    @media (min-width: 64rem)  { @content ; }  // 1024px
   }
-  @else if $point == medium {
-    @media (max-width: 40rem) { @content; }
+  @else if $width == md {
+    @media (min-width: 40rem) { @content; }  // 640px
   }
-  @else if $point == small {
-    @media (max-width: 30rem)  { @content ; }
+  @else if $width == sm {
+    @media (max-width: 30rem)  { @content ; }  // 480px
+  }
+}
+
+@mixin breakpoint-height($height) {
+
+  @if $height == x-lg-h {
+    @media (min-height: 105rem) { @content ; }  // 1680px
+  }
+  @else if $height == lg-h {
+    @media (min-height: 90rem) { @content ; }   // 1440px
+  }
+  @else if $height == md-h {
+    @media (min-height: 75rem) { @content ; }  // 1200px
+  }
+  @else if $height == sm-h {
+    @media (min-height: 64rem)  { @content ; }  // 1024px
+  }
+  @else if $height == md-h {
+    @media (min-height: 40rem) { @content; }  // 640px
+  }
+  @else if $height == sm-h {
+    @media (max-height: 30rem)  { @content ; }  // 480px
   }
 }
 
